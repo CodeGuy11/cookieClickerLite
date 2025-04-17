@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Cookie Clicker but Bad</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="cookieContainer">
+                <p id="cookieCount">You have 0 cookies.</p>
+                <p id="clicksPerSecond">0 clicks per second.</p>
+                <button id="cookieButton", onclick = "bake(1)">Bake a cookie</button>
+            </div>
+                <div class="autoClickers">
+                    <div class="cursors">
+                        <button onclick = "buyCursor(1)">Buy a cursor<p id="cursorPrice">0</p></button>
+                        <p id="cursorCount">You have 0 cursors.</p>
+                    </div>
+                    <div class="grandmas">
+                        <button onclick = "buyGrandma(1)">Buy a grandma<p id="grandmaPrice">0</p></button>
+                        <p id="grandmaCount">You have 0 grandmas.</p>
+                    </div>
+                </div>
+        <script src="script.js"></script>
+    </body>
+</html>
