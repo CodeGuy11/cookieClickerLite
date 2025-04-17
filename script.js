@@ -13,7 +13,7 @@ function updateDisplay() {
     document.getElementById("clicksPerSecond").textContent = "per second: " + clicksPerSecond;
     document.getElementById("grandmaCount").textContent = grandmas;
     document.getElementById("grandmaPrice").textContent = grandmaPrice;
-    document.getElementById("farmCount").textContent = farmCount;
+    document.getElementById("farmCount").textContent = farms;
     document.getElementById("farmPrice").textContent = farmPrice;
 }
 updateDisplay()
@@ -42,7 +42,7 @@ function buyFarm(farmAmount) {
         farms+= farmAmount;
         cookies-= farmPrice;
     }
-    grandmaPrice = Math.ceil(100*(1.15**farms));
+    grandmaPrice = Math.ceil(1100*(1.15**farms));
     updateDisplay();
 }
 setInterval(() => {
