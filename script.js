@@ -46,7 +46,7 @@ function buyFarm(farmAmount) {
     updateDisplay();
 }
 setInterval(() => {
-    clicksPerSecond = ((cursors/10) + grandmas + (farms*8);
+    clicksPerSecond = ((cursors/10) + grandmas + (farms*8));
     cookies+= clicksPerSecond;
     updateDisplay();
 }, 1000);
