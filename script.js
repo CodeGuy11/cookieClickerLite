@@ -42,7 +42,7 @@ function buyFarm(farmAmount) {
         farms+= farmAmount;
         cookies-= farmPrice;
     }
-    grandmaPrice = Math.ceil(1100*(1.15**farms));
+    farmPrice = Math.ceil(1100*(1.15**farms));
     updateDisplay();
 }
 setInterval(() => {
