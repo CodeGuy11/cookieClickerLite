@@ -1,2 +1,2 @@
 # cookieClickerLite
-THIS IS NOT OFFICIAL, JUST A RECREATION OF THE GAME.
+its not offical and it is litteraly just cookie clicker
