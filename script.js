@@ -15,6 +15,7 @@ function updateDisplay() {
     document.getElementById("grandmaPrice").textContent = grandmaPrice;
     document.getElementById("farmCount").textContent = farms;
     document.getElementById("farmPrice").textContent = farmPrice;
+    document.getElementById("title").textContent = Math.floor(cookies) + " cookies";
 }
 updateDisplay()
 function bake(bakeAmount) {
