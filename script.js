@@ -40,6 +40,7 @@ function buyClicker(clikcerAmount, type) {
     farmPrice = Math.ceil(1100*(1.15**farms));
     updateDisplay();
 }
+function buyUpgrade(type)
 setInterval(() => {
     clicksPerSecond = ((cursors/10) + grandmas + (farms*8));
     cookies+= clicksPerSecond;
