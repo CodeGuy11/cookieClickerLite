@@ -6,6 +6,9 @@ let grandmas = 0
 let grandmaPrice = 100
 let farms = 0
 let farmPrice = 1100
+let cursorMult = 1
+let grandmaMult = 1
+let farmMult = 1
 function updateDisplay() {
     document.getElementById("cookieCount").textContent = Math.floor(cookies) + " cookies";
     document.getElementById("cursorCount").textContent = cursors;
@@ -40,9 +43,14 @@ function buyClicker(clikcerAmount, type) {
     farmPrice = Math.ceil(1100*(1.15**farms));
     updateDisplay();
 }
-function buyUpgrade(type)
+function buyUpgrade(type) {
+    if (cookies >= 100 && type == strongIndex) {
+        cookies-= 100;
+        cursorMult*= 2;
+    }
+}
 setInterval(() => {
-    clicksPerSecond = ((cursors/10) + grandmas + (farms*8));
+    clicksPerSecond = (((cursors/10)*cursorMult) + (grandmas*grandmaMult) + ((farms*8)*farmMult));
     cookies+= clicksPerSecond;
     updateDisplay();
 }, 1000);
