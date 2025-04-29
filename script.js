@@ -22,27 +22,21 @@ function bake(bakeAmount) {
     cookies+= bakeAmount;
     updateDisplay();
 }
-function buyCursor(cursorAmount) {
-    if (cookies >= cursorPrice) {
-        cursors+= cursorAmount;
+function buyClicker(clikcerAmount, type) {
+    if (cookies >= cursorPrice && type == "cursor") {
+        cursors+= clickerAmount;
         cookies-= cursorPrice;
     }
-    cursorPrice = Math.ceil(15*(1.15**cursors));
-    updateDisplay();
-}
-function buyGrandma(grandmaAmount) {
-    if (cookies >= grandmaPrice) {
-        grandmas+= grandmaAmount;
+    else if (cookies >= grandmaPrice && type == "grandma") {
+        grandmas+= clickerAmount;
         cookies-= grandmaPrice;
     }
-    grandmaPrice = Math.ceil(100*(1.15**grandmas));
-    updateDisplay();
-}
-function buyFarm(farmAmount) {
-    if (cookies >= farmPrice) {
-        farms+= farmAmount;
+    else if (cookies >= farmPrice && type == "farm") {
+        farms+= clickerAmount;
         cookies-= farmPrice;
     }
+    cursorPrice = Math.ceil(15*(1.15**cursors));
+    grandmaPrice = Math.ceil(100*(1.15**grandmas));
     farmPrice = Math.ceil(1100*(1.15**farms));
     updateDisplay();
 }
