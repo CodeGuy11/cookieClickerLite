@@ -1,5 +1,5 @@
 .container {
-    font-family: Arial;
+    font-family: Comic Sans MS;
     display: flex;
     justify-content: space-between;
     padding: 100px;
@@ -9,8 +9,6 @@
 .cookieContainer {
     text-align: center;
     padding: 50px;
-    margin-top: -400px;
-    margin-left: 100px;
 }
 .autoClickers {
     display: flex;
