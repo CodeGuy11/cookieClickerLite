@@ -13,7 +13,7 @@ function updateDisplay() {
     document.getElementById("cookieCount").textContent = Math.floor(cookies) + " cookies";
     document.getElementById("cursorCount").textContent = cursors;
     document.getElementById("cursorPrice").textContent = cursorPrice;
-    document.getElementById("clicksPerSecond").textContent = "per second: " + clicksPerSecond;
+    document.getElementById("clicksPerSecond").textContent = "per second: " + clicksPerSecond.toFixed(3);
     document.getElementById("grandmaCount").textContent = grandmas;
     document.getElementById("grandmaPrice").textContent = grandmaPrice;
     document.getElementById("farmCount").textContent = farms;
@@ -25,18 +25,18 @@ function bake(bakeAmount) {
     cookies+= bakeAmount;
     updateDisplay();
 }
-function buyClicker(clikcerAmount, type) {
+function buyClicker(clickerAmount, type) {
     if (cookies >= cursorPrice && type == "cursor") {
         cursors+= clickerAmount;
-        cookies-= cursorPrice;
+        cookies-= cursorPrice*clickerAmount;
     }
     else if (cookies >= grandmaPrice && type == "grandma") {
         grandmas+= clickerAmount;
-        cookies-= grandmaPrice;
+        cookies-= grandmaPrice*clickerAmount;
     }
     else if (cookies >= farmPrice && type == "farm") {
         farms+= clickerAmount;
-        cookies-= farmPrice;
+        cookies-= farmPrice*clickerAmount;
     }
     cursorPrice = Math.ceil(15*(1.15**cursors));
     grandmaPrice = Math.ceil(100*(1.15**grandmas));
