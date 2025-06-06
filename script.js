@@ -9,11 +9,15 @@ let farmPrice = 1100
 let cursorMult = 1
 let grandmaMult = 1
 let farmMult = 1
+function roundAndFormatToTenth(num) {
+    const rounded = Math.round(num * 10) / 10;
+    return rounded === 0 ? "0" : rounded.toFixed(1);
+}
 function updateDisplay() {
     document.getElementById("cookieCount").textContent = Math.floor(cookies) + " cookies";
     document.getElementById("cursorCount").textContent = cursors;
     document.getElementById("cursorPrice").textContent = cursorPrice;
-    document.getElementById("clicksPerSecond").textContent = "per second: " + clicksPerSecond.toFixed(3);
+    document.getElementById("clicksPerSecond").textContent = "per second: " + roundAndFormatToTenth(clicksPerSecond);
     document.getElementById("grandmaCount").textContent = grandmas;
     document.getElementById("grandmaPrice").textContent = grandmaPrice;
     document.getElementById("farmCount").textContent = farms;
